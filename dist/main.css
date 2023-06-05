@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.main {
+  display: grid;
+  justify-items: center;
+}
+
+.calculator {
+  background-color: hsl(0, 0%, 100%);
+  width: 95%;
+  max-width: 52.5rem;
+  margin-top: 4rem;
+  margin-inline: 1rem;
+  border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+  padding: clamp(1rem, 1rem + 1vw, 5rem);
+  padding-bottom: 4rem;
+  font-weight: bold;
+}
+.calculator__input {
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
+  padding: 1em 0em;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+.calculator__input .field-container > * {
+  margin-block: 0.3125em;
+}
+.calculator__input .field-container {
+  font-size: 1rem;
+}
+.calculator__input .field-container label {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 80%;
+  font-weight: 700;
+  color: hsla(0, 0%, 0%, 0.5);
+}
+.calculator__input .field-container input {
+  display: block;
+  max-width: 90px;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsla(0, 0%, 0%, 0.3);
+  font-size: 1rem;
+}
+.calculator__input .field-container .alert-danger {
+  font-size: clamp(0.6rem, 0.3rem + 1vw, 1rem);
+  font-weight: 400;
+  font-style: italic;
+  color: hsl(0, 100%, 67%);
+  position: relative;
+}
+.calculator__output {
+  padding-top: 4rem;
+}
+.calculator__output .output {
+  line-height: 1;
+  font-style: italic;
+  font-size: 3.5rem;
+}
+.calculator__output .output .output-num {
+  color: hsl(259, 100%, 65%);
+}
+
+@media (min-width: 700px) {
+  .calculator {
+    padding-block: inherit;
+    padding: 3.8rem;
+  }
+  .calculator__input {
+    padding-bottom: 3rem;
+    gap: 1.5rem;
+    justify-content: initial;
+  }
+  .calculator__input .btn {
+    right: 0;
+  }
+  .calculator__input .field-container input {
+    max-width: 156px;
+    padding: 1.4rem 1rem;
+    font-size: clamp(0.9rem, 0.9rem + 1vw, 1rem);
+  }
+  .calculator__output .output {
+    font-size: 6.5rem;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin: 1rem auto;
+}
+footer .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.btn {
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: -40px;
+  right: 40%;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

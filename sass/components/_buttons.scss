@@ -1,0 +1,13 @@
+@use "../utilities" as u;
+
+.btn {
+  background-color: u.$clr-primary-purple;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  //   inset: unset 0 0 unset;
+  bottom: -40px;
+  right: 40%;
+  padding: 1rem;
+  cursor: pointer;
+}

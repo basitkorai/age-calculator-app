@@ -1,0 +1,112 @@
+@use "../utilities" as u;
+
+.calculator {
+  background-color: u.$clr-secondary-400;
+  width: 95%;
+  max-width: u.rem(840);
+
+  //   border: 2px solid;
+  margin-top: 4rem;
+  margin-inline: 1rem;
+  border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+  padding: clamp(1rem, 1rem + 1vw, 5rem);
+  padding-bottom: 4rem;
+  font-weight: bold;
+
+  &__input {
+    border-bottom: 1px solid hsla(0, 0%, 0%, 30%);
+    padding: 1em 0em;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    flex-wrap: wrap;
+
+    .field-container > * {
+      margin-block: u.em(5);
+      // border: 1px dotted purple;
+    }
+
+    .field-container {
+      font-size: 1rem;
+
+      label {
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 80%;
+        font-weight: 700;
+        color: hsla(0, 0%, 0%, 50%);
+      }
+
+      input {
+        display: block;
+        max-width: 90px;
+        padding: 0.6rem;
+        border-radius: 0.5rem;
+        border: 1px solid hsla(0, 0%, 0%, 30%);
+        // margin-top: 5px;
+        font-size: clamp(0.9rem, 1rem, 2rem);
+      }
+
+      .alert-danger {
+        font-size: clamp(0.6rem, 0.3rem + 1vw, 1rem);
+        font-weight: 400;
+        font-style: italic;
+        color: u.$clr-primary-light-red;
+        position: relative;
+        // opacity: 0;
+        // z-index: -1;
+      }
+    }
+  }
+
+  &__output {
+    // border: 2px solid;
+    padding-top: 4rem;
+
+    .output {
+      // border: 1px solid;
+      //   margin: 0.5rem;
+      line-height: 1;
+      font-style: italic;
+      font-size: 3.5rem;
+
+      .output-num {
+        color: u.$clr-primary-purple;
+      }
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .calculator {
+    padding-block: inherit;
+    padding: 3.8rem;
+
+    &__input {
+      padding-bottom: 3rem;
+      gap: 1.5rem;
+      justify-content: initial;
+
+      .btn {
+        right: 0;
+      }
+
+      .field-container {
+        input {
+          max-width: 156px;
+          padding: 1.4rem 1rem;
+          font-size: clamp(0.9rem, 0.9rem + 1vw, 1rem);
+        }
+      }
+    }
+
+    &__output {
+
+      .output {
+        font-size: 6.5rem;
+      }
+    }
+  }
+}

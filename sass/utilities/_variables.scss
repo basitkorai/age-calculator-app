@@ -1,0 +1,26 @@
+// Font-Family
+$font-family: 'Poppins', sans-serif;
+
+// Font-Weight
+$fw-regular: 400; // italic
+$fw-bold: 700;
+$fw-bolder: 800; // italic
+
+// Font-Size
+$fs-body: 1rem;
+$fs-input: 2rem;
+
+// Colors
+$clr-primary-purple: hsl(259, 100%, 65%);
+$clr-primary-light-red: hsl(0, 100%, 67%);
+$clr-black: hsl(0, 0%, 8%);
+
+$clr-secondary-100: hsl(0, 1%, 44%);
+$clr-secondary-200: hsl(0, 0%, 86%);
+$clr-secondary-300: hsl(0, 0%, 94%);
+$clr-secondary-400: hsl(0, 0%, 100%);
+
+// Screensizes
+$screen-mobile: 375px;
+$screen-desktop: 1440px;
+

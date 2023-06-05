@@ -1,0 +1,21 @@
+@use '../utilities' as u;
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-family: u.$font-family;
+    font-style: italic;
+    font-weight: u.$fw-bold;
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        margin: 1rem auto;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+}

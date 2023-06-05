@@ -1,0 +1,13 @@
+@use '../utilities' as u;
+
+body {
+    font-family: u.$font-family;
+    background-color: u.$clr-secondary-300;
+}
+
+.main {
+    // border: 2px solid;
+    display: grid;
+    justify-items: center;
+}
+

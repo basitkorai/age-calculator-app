@@ -1,0 +1,12 @@
+{
+  "name": "age-calculator-app-main",
+  "version": "1.0.0",
+  "description": "This is a solution to the Frontend Mentor Challenge, Age Calculator App",
+  "main": "app.js",
+  "scripts": {
+    "start": "sass --watch sass:dist"
+  },
+  "keywords": ["Age Calculator"],
+  "author": "Basit Korai",
+  "license": "MIT"
+}
