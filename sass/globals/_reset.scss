@@ -69,3 +69,16 @@ a:hover {
   width: 1px !important;
   white-space: nowrap !important;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}

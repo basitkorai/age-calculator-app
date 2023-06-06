@@ -5,7 +5,6 @@
   width: 95%;
   max-width: u.rem(840);
 
-  //   border: 2px solid;
   margin-top: 4rem;
   margin-inline: 1rem;
   border-radius: 1.5rem 1.5rem 6rem 1.5rem;
@@ -25,7 +24,6 @@
 
     .field-container > * {
       margin-block: u.em(5);
-      // border: 1px dotted purple;
     }
 
     .field-container {
@@ -45,32 +43,28 @@
         padding: 0.6rem;
         border-radius: 0.5rem;
         border: 1px solid hsla(0, 0%, 0%, 30%);
-        // margin-top: 5px;
         font-size: clamp(0.9rem, 1rem, 2rem);
       }
 
       .alert-danger {
-        font-size: clamp(0.6rem, 0.3rem + 1vw, 1rem);
+        font-size: clamp(0.5rem, 0.3rem + 1vw, 1rem);
         font-weight: 400;
         font-style: italic;
         color: u.$clr-primary-light-red;
         position: relative;
-        // opacity: 0;
-        // z-index: -1;
+        opacity: 0;
+        z-index: -1;
       }
     }
   }
 
   &__output {
-    // border: 2px solid;
     padding-top: 4rem;
 
     .output {
-      // border: 1px solid;
-      //   margin: 0.5rem;
       line-height: 1;
       font-style: italic;
-      font-size: 3.5rem;
+      font-size: clamp(3rem, 1rem + 2vw, 3.5rem);
 
       .output-num {
         color: u.$clr-primary-purple;
