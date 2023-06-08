@@ -9,4 +9,9 @@
   right: 40%;
   padding: 1rem;
   cursor: pointer;
+  transition: 150ms ease-in-out all;
+}
+
+.btn:hover {
+  background-color: u.$clr-black;
 }

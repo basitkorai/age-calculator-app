@@ -134,7 +134,11 @@ body {
   padding: 0.6rem;
   border-radius: 0.5rem;
   border: 1px solid hsla(0, 0%, 0%, 0.3);
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1vw, 1.7rem);
+  cursor: pointer;
+}
+.calculator__input .field-container input::placeholder {
+  font-size: 1.7rem;
 }
 .calculator__input .field-container .alert-danger {
   font-size: clamp(0.5rem, 0.3rem + 1vw, 1rem);
@@ -144,9 +148,14 @@ body {
   position: relative;
   opacity: 0;
   z-index: -1;
+  transition: 550ms ease-out all;
+}
+.calculator__input .field-container .showError {
+  opacity: 1;
+  z-index: 0;
 }
 .calculator__output {
-  padding-top: 4rem;
+  padding-block: 2rem;
 }
 .calculator__output .output {
   line-height: 1;
@@ -159,11 +168,11 @@ body {
 
 @media (min-width: 700px) {
   .calculator {
-    padding-block: inherit;
     padding: 3.8rem;
+    padding-block: 2rem;
   }
   .calculator__input {
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     gap: 1.5rem;
     justify-content: initial;
   }
@@ -173,7 +182,6 @@ body {
   .calculator__input .field-container input {
     max-width: 156px;
     padding: 1.4rem 1rem;
-    font-size: clamp(0.9rem, 0.9rem + 1vw, 1rem);
   }
   .calculator__output .output {
     font-size: 6.5rem;
@@ -206,6 +214,11 @@ footer .attribution a {
   right: 40%;
   padding: 1rem;
   cursor: pointer;
+  transition: 150ms ease-in-out all;
+}
+
+.btn:hover {
+  background-color: hsl(0, 0%, 8%);
 }
 
 /*# sourceMappingURL=main.css.map */

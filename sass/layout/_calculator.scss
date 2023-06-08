@@ -1,6 +1,8 @@
 @use "../utilities" as u;
 
 .calculator {
+  $dim-color: hsla(0, 0%, 0%, 30%);
+
   background-color: u.$clr-secondary-400;
   width: 95%;
   max-width: u.rem(840);
@@ -13,7 +15,7 @@
   font-weight: bold;
 
   &__input {
-    border-bottom: 1px solid hsla(0, 0%, 0%, 30%);
+    border-bottom: 1px solid $dim-color;
     padding: 1em 0em;
     padding-bottom: 3rem;
     display: flex;
@@ -42,8 +44,14 @@
         max-width: 90px;
         padding: 0.6rem;
         border-radius: 0.5rem;
-        border: 1px solid hsla(0, 0%, 0%, 30%);
-        font-size: clamp(0.9rem, 1rem, 2rem);
+        border: 1px solid $dim-color;
+        font-size: clamp(0.9rem, 1vw, 1.7rem);
+        // font-size: 5rem;
+        cursor: pointer;
+      }
+
+      input::placeholder {
+        font-size: 1.7rem;
       }
 
       .alert-danger {
@@ -54,12 +62,18 @@
         position: relative;
         opacity: 0;
         z-index: -1;
+        transition: 550ms ease-out all;
+      }
+
+      .showError {
+        opacity: 1;
+        z-index: 0;
       }
     }
   }
 
   &__output {
-    padding-top: 4rem;
+    padding-block: 2rem;
 
     .output {
       line-height: 1;
@@ -75,11 +89,11 @@
 
 @media (min-width: 700px) {
   .calculator {
-    padding-block: inherit;
     padding: 3.8rem;
+    padding-block: 2rem;
 
     &__input {
-      padding-bottom: 3rem;
+      padding-bottom: 1rem;
       gap: 1.5rem;
       justify-content: initial;
 
@@ -91,13 +105,11 @@
         input {
           max-width: 156px;
           padding: 1.4rem 1rem;
-          font-size: clamp(0.9rem, 0.9rem + 1vw, 1rem);
         }
       }
     }
 
     &__output {
-
       .output {
         font-size: 6.5rem;
       }
