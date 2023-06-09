@@ -79,6 +79,10 @@ inputForm.addEventListener("submit", (e) => {
       inputElements[i].nextElementSibling.innerText = `This field is required`;
       invalidity.push(false);
       console.log(`the value is "${inputElements[i].value}"`);
+    } else if (
+      inputElements[i].nextElementSibling.classList.contains("showError")
+    ) {
+      invalidity.push(false);
     } else {
       inputElements[i].nextElementSibling.classList.remove("showError");
       invalidity.push(true);
