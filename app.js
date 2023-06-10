@@ -153,8 +153,29 @@ function calculateAge() {
   }
 
   // print the calculated age
+  animateNumbers(outputDay, calculatedDay);
+  animateNumbers(outputMonth, calculatedMonth);
+  animateNumbers(outputYear, calculatedYear);
+}
 
-  outputDay.innerText = calculatedDay;
-  outputMonth.innerText = calculatedMonth;
-  outputYear.innerText = calculatedYear;
+function animateNumbers(element, calculatedAge) {
+  let step = 25;
+  calculatedAge > 25 && (step = 20);
+  calculatedAge > 50 && (step = 15);
+  calculatedAge > 75 && (step = 10);
+  calculatedAge > 100 && (step = 5);
+  calculatedAge > 200 && (step = 1);
+
+  let n = 0;
+  if (calculatedAge === 0) {
+    element.innerHTML = n;
+  } else {
+    let interval = setInterval(() => {
+      n = n + 1;
+      if (n === calculatedAge) {
+        clearInterval(interval);
+      }
+      element.innerHTML = n;
+    }, step);
+  }
 }
