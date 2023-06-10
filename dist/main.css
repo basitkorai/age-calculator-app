@@ -12,7 +12,6 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -161,7 +160,7 @@ body {
 .calculator__output .output {
   line-height: 1;
   font-style: italic;
-  font-size: clamp(3rem, 1rem + 2vw, 3.5rem);
+  font-size: clamp(2.1rem, 1rem + 2vw, 3.5rem);
 }
 .calculator__output .output .output-num {
   color: hsl(259, 100%, 65%);
@@ -198,8 +197,6 @@ footer {
 footer .attribution {
   font-size: 11px;
   text-align: center;
-  position: absolute;
-  bottom: 0;
   margin: 1rem auto;
 }
 footer .attribution a {
