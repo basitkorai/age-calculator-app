@@ -22,9 +22,6 @@ const today = new Date();
 let currentDay = today.getDate();
 let currentMonth = 1 + today.getMonth();
 let currentYear = today.getFullYear();
-// console.log(currentMonth);
-
-let isValid = false;
 
 inputDay.addEventListener("input", (e) => {
   if (+inputDay.value > 31) {
@@ -78,7 +75,6 @@ inputForm.addEventListener("submit", (e) => {
       inputElements[i].nextElementSibling.classList.add("showError");
       inputElements[i].nextElementSibling.innerText = `This field is required`;
       invalidity.push(false);
-      console.log(`the value is "${inputElements[i].value}"`);
     } else if (
       inputElements[i].nextElementSibling.classList.contains("showError")
     ) {
@@ -86,12 +82,8 @@ inputForm.addEventListener("submit", (e) => {
     } else {
       inputElements[i].nextElementSibling.classList.remove("showError");
       invalidity.push(true);
-      console.log(`the value is "${inputElements[i].value}"`);
     }
   }
-  console.log(invalidity);
-  // console.log(inputElements[invalidity.indexOf(1)]);
-
   if (!invalidity.includes(false)) {
     calculateAge();
   } else {
@@ -161,10 +153,8 @@ function calculateAge() {
   }
 
   // print the calculated age
-  for (let i = 0; i < calculatedDay; i++) {
-    outputDay.innerText = i;
-  }
 
+  outputDay.innerText = calculatedDay;
   outputMonth.innerText = calculatedMonth;
   outputYear.innerText = calculatedYear;
 }
