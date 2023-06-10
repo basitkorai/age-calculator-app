@@ -1,7 +1,7 @@
 @use "../utilities" as u;
 
 .calculator {
-  $dim-color: hsla(0, 0%, 0%, 30%);
+  $dim-color: hsla(0, 0%, 0%, 15%);
 
   background-color: u.$clr-secondary-400;
   width: 95%;
@@ -30,6 +30,7 @@
 
     .field-container {
       font-size: 1rem;
+      // background-color: rgba(121, 255, 104, 0.76);
 
       label {
         text-transform: uppercase;
@@ -45,13 +46,12 @@
         padding: 0.6rem;
         border-radius: 0.5rem;
         border: 1px solid $dim-color;
-        font-size: clamp(0.9rem, 1vw, 1.7rem);
-        // font-size: 5rem;
+        font-size: 1.3rem;
         cursor: pointer;
       }
 
       input::placeholder {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
       }
 
       .alert-danger {
@@ -67,13 +67,14 @@
 
       .showError {
         opacity: 1;
-        z-index: 0;
+        z-index: initial;
       }
     }
   }
 
   &__output {
-    padding-block: 2rem;
+    padding-block: .5rem;
+    padding-block-start: 4rem;
 
     .output {
       line-height: 1;
@@ -93,18 +94,19 @@
     padding-block: 2rem;
 
     &__input {
-      padding-bottom: 1rem;
+      padding-bottom: 0.8em;
       gap: 1.5rem;
       justify-content: initial;
 
       .btn {
         right: 0;
+
       }
 
       .field-container {
         input {
           max-width: 156px;
-          padding: 1.4rem 1rem;
+          padding: 0.8rem 1rem;
         }
       }
     }

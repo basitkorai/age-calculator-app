@@ -2,16 +2,27 @@
 
 .btn {
   background-color: u.$clr-primary-purple;
+  background-image: url('../assets/images/icon-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   border-radius: 50%;
   border: none;
   position: absolute;
-  bottom: -40px;
+  bottom: -31px;
   right: 40%;
-  padding: 1rem;
+  padding: 2rem;
   cursor: pointer;
   transition: 150ms ease-in-out all;
 }
 
 .btn:hover {
   background-color: u.$clr-black;
+}
+
+@media screen and (min-width: 700px) {
+  .btn {
+    padding: 3rem;
+    bottom: -45px;
+  }
 }

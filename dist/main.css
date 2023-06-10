@@ -106,7 +106,7 @@ body {
   font-weight: bold;
 }
 .calculator__input {
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.3);
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.15);
   padding: 1em 0em;
   padding-bottom: 3rem;
   display: flex;
@@ -133,12 +133,12 @@ body {
   max-width: 90px;
   padding: 0.6rem;
   border-radius: 0.5rem;
-  border: 1px solid hsla(0, 0%, 0%, 0.3);
-  font-size: clamp(0.9rem, 1vw, 1.7rem);
+  border: 1px solid hsla(0, 0%, 0%, 0.15);
+  font-size: 1.3rem;
   cursor: pointer;
 }
 .calculator__input .field-container input::placeholder {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 .calculator__input .field-container .alert-danger {
   font-size: clamp(0.5rem, 0.3rem + 1vw, 1rem);
@@ -152,10 +152,11 @@ body {
 }
 .calculator__input .field-container .showError {
   opacity: 1;
-  z-index: 0;
+  z-index: initial;
 }
 .calculator__output {
-  padding-block: 2rem;
+  padding-block: 0.5rem;
+  padding-block-start: 4rem;
 }
 .calculator__output .output {
   line-height: 1;
@@ -172,7 +173,7 @@ body {
     padding-block: 2rem;
   }
   .calculator__input {
-    padding-bottom: 1rem;
+    padding-bottom: 0.8em;
     gap: 1.5rem;
     justify-content: initial;
   }
@@ -181,7 +182,7 @@ body {
   }
   .calculator__input .field-container input {
     max-width: 156px;
-    padding: 1.4rem 1rem;
+    padding: 0.8rem 1rem;
   }
   .calculator__output .output {
     font-size: 6.5rem;
@@ -207,18 +208,29 @@ footer .attribution a {
 
 .btn {
   background-color: hsl(259, 100%, 65%);
+  background-image: url("../assets/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   border-radius: 50%;
   border: none;
   position: absolute;
-  bottom: -40px;
+  bottom: -31px;
   right: 40%;
-  padding: 1rem;
+  padding: 2rem;
   cursor: pointer;
   transition: 150ms ease-in-out all;
 }
 
 .btn:hover {
   background-color: hsl(0, 0%, 8%);
+}
+
+@media screen and (min-width: 700px) {
+  .btn {
+    padding: 3rem;
+    bottom: -45px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
