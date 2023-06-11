@@ -46,9 +46,8 @@
       }
 
       input:focus-visible {
-        // outline-width: 2px;
-        // outline: none;
         outline-style: solid;
+        border: none;
 
       }
 
@@ -91,6 +90,7 @@
 
       input:focus-visible {
         outline-color: u.$clr-primary-light-red;
+        border: none;
       }
 
       label {

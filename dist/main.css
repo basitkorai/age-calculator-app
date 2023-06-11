@@ -135,6 +135,7 @@ body {
 }
 .calculator__input .field-container input:focus-visible {
   outline-style: solid;
+  border: none;
 }
 .calculator__input .field-container input {
   display: block;
@@ -168,6 +169,7 @@ body {
 }
 .calculator__input .error input:focus-visible {
   outline-color: hsl(0, 100%, 67%);
+  border: none;
 }
 .calculator__input .error label {
   color: hsl(0, 100%, 67%);
