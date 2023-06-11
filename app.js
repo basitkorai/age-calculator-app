@@ -72,14 +72,17 @@ inputForm.addEventListener("submit", (e) => {
 
   for (let i = 0; i < inputElements.length; i++) {
     if (inputElements[i].value === "") {
+      inputElements[i].parentElement.classList.add('error');
       inputElements[i].nextElementSibling.classList.add("showError");
       inputElements[i].nextElementSibling.innerText = `This field is required`;
       invalidity.push(false);
     } else if (
       inputElements[i].nextElementSibling.classList.contains("showError")
     ) {
+      inputElements[i].parentElement.classList.add('error');
       invalidity.push(false);
     } else {
+      inputElements[i].parentElement.classList.remove('error');
       inputElements[i].nextElementSibling.classList.remove("showError");
       invalidity.push(true);
     }
@@ -94,6 +97,7 @@ inputForm.addEventListener("submit", (e) => {
 // FUNCTIONS
 function addError(time) {
   time.classList.add("showError");
+  time.parentElement.classList.add('error');
   switch (time) {
     case inputDayAlert:
       time.innerText = `Must be a valid day`;
@@ -111,6 +115,8 @@ function addError(time) {
 
 function removeError(time) {
   time.classList.remove("showError");
+  time.parentElement.classList.remove('error');
+
 }
 
 function calculateAge() {

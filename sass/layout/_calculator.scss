@@ -1,5 +1,10 @@
 @use "../utilities" as u;
 
+::selection {
+  background-color: u.$clr-primary-purple;
+  color: #ffffff;
+}
+
 .calculator {
   $dim-color: hsla(0, 0%, 0%, 15%);
 
@@ -30,6 +35,7 @@
 
     .field-container {
       font-size: 1rem;
+      color: hsla(0, 0%, 0%, 50%);
 
       label {
         text-transform: uppercase;
@@ -37,6 +43,13 @@
         font-size: 80%;
         font-weight: 700;
         color: hsla(0, 0%, 0%, 50%);
+      }
+
+      input:focus-visible {
+        // outline-width: 2px;
+        // outline: none;
+        outline-style: solid;
+
       }
 
       input {
@@ -54,7 +67,7 @@
       }
 
       .alert-danger {
-        font-size: clamp(0.5rem, 0.3rem + 1vw, 1rem);
+        font-size: clamp(0.55rem, 0.3rem + 1vw, 1rem);
         font-weight: 400;
         font-style: italic;
         color: u.$clr-primary-light-red;
@@ -62,17 +75,32 @@
         opacity: 0;
         z-index: -1;
         transition: 550ms ease-out all;
+        text-align: center;
       }
 
       .showError {
         opacity: 1;
-        z-index: initial;
+        z-index: 0;
+      }
+    }
+
+    .error {
+      input {
+        border-color: u.$clr-primary-light-red;
+      }
+
+      input:focus-visible {
+        outline-color: u.$clr-primary-light-red;
+      }
+
+      label {
+        color: u.$clr-primary-light-red;
       }
     }
   }
 
   &__output {
-    padding-block: .5rem;
+    padding-block: 0.5rem;
     padding-block-start: 4rem;
 
     .output {
@@ -99,7 +127,6 @@
 
       .btn {
         right: 0;
-
       }
 
       .field-container {

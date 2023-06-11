@@ -93,6 +93,11 @@ body {
   justify-items: center;
 }
 
+::selection {
+  background-color: hsl(259, 100%, 65%);
+  color: #ffffff;
+}
+
 .calculator {
   background-color: hsl(0, 0%, 100%);
   width: 95%;
@@ -119,6 +124,7 @@ body {
 }
 .calculator__input .field-container {
   font-size: 1rem;
+  color: hsla(0, 0%, 0%, 0.5);
 }
 .calculator__input .field-container label {
   text-transform: uppercase;
@@ -126,6 +132,9 @@ body {
   font-size: 80%;
   font-weight: 700;
   color: hsla(0, 0%, 0%, 0.5);
+}
+.calculator__input .field-container input:focus-visible {
+  outline-style: solid;
 }
 .calculator__input .field-container input {
   display: block;
@@ -140,7 +149,7 @@ body {
   font-size: 1.5rem;
 }
 .calculator__input .field-container .alert-danger {
-  font-size: clamp(0.5rem, 0.3rem + 1vw, 1rem);
+  font-size: clamp(0.55rem, 0.3rem + 1vw, 1rem);
   font-weight: 400;
   font-style: italic;
   color: hsl(0, 100%, 67%);
@@ -148,10 +157,20 @@ body {
   opacity: 0;
   z-index: -1;
   transition: 550ms ease-out all;
+  text-align: center;
 }
 .calculator__input .field-container .showError {
   opacity: 1;
-  z-index: initial;
+  z-index: 0;
+}
+.calculator__input .error input {
+  border-color: hsl(0, 100%, 67%);
+}
+.calculator__input .error input:focus-visible {
+  outline-color: hsl(0, 100%, 67%);
+}
+.calculator__input .error label {
+  color: hsl(0, 100%, 67%);
 }
 .calculator__output {
   padding-block: 0.5rem;
