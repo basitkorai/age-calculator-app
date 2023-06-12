@@ -27,6 +27,7 @@
     justify-content: center;
     gap: 1.05rem;
     position: relative;
+    flex-wrap: wrap;
 
     .field-container > * {
       margin-block: u.em(4);
@@ -37,6 +38,7 @@
       color: hsla(0, 0%, 0%, 50%);
       width: 30%;
       max-width: u.rem(85);
+      min-width: u.rem(50);
 
       label {
         text-transform: uppercase;
@@ -68,7 +70,7 @@
       }
 
       .alert-danger {
-        font-size: clamp(0.55rem, 0.3rem + 1vw, 0.76rem);
+        font-size: clamp(0.5rem, 0.1rem + 1vw, 0.76rem);
         font-weight: 400;
         font-style: italic;
         color: u.$clr-primary-light-red;
