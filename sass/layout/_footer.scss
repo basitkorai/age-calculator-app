@@ -1,19 +1,17 @@
-@use '../utilities' as u;
+@use "../utilities" as u;
 
-footer {
-    display: flex;
-    justify-content: center;
+  .attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     font-family: u.$font-family;
     font-style: italic;
-    font-weight: u.$fw-bold;
+    color: #ffffff;
+    background-color: u.$clr-primary-purple;
+  }
 
-    .attribution {
-        font-size: 11px;
-        text-align: center;
-        margin: 1rem auto;
-      }
-
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-}
+  .attribution a {
+    color: greenyellow;
+  }
