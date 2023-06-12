@@ -88,11 +88,14 @@ body {
   background-color: hsl(0, 0%, 94%);
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (min-width: 700px) {
   .main {
-    display: flex;
     min-height: 100vh;
-    justify-content: center;
     align-items: center;
   }
   .calculator {
@@ -123,6 +126,7 @@ body {
   justify-content: center;
   gap: 1.05rem;
   position: relative;
+  flex-wrap: wrap;
 }
 .calculator__input .field-container > * {
   margin-block: 0.25em;
@@ -132,6 +136,7 @@ body {
   color: hsla(0, 0%, 0%, 0.5);
   width: 30%;
   max-width: 5.3125rem;
+  min-width: 3.125rem;
 }
 .calculator__input .field-container label {
   text-transform: uppercase;
@@ -158,7 +163,7 @@ body {
   font-size: 1.5rem;
 }
 .calculator__input .field-container .alert-danger {
-  font-size: clamp(0.55rem, 0.3rem + 1vw, 0.76rem);
+  font-size: clamp(0.5rem, 0.1rem + 1vw, 0.76rem);
   font-weight: 400;
   font-style: italic;
   color: hsl(0, 100%, 67%);
