@@ -25,17 +25,18 @@
     padding-bottom: 3rem;
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1.05rem;
     position: relative;
-    flex-wrap: wrap;
 
     .field-container > * {
-      margin-block: u.em(5);
+      margin-block: u.em(4);
     }
 
     .field-container {
       font-size: 1rem;
       color: hsla(0, 0%, 0%, 50%);
+      width: 30%;
+      max-width: u.rem(85);
 
       label {
         text-transform: uppercase;
@@ -53,13 +54,13 @@
 
       input {
         display: block;
-        max-width: 90px;
         padding: 0.6rem;
         border-radius: 0.5rem;
         outline: 1px solid $dim-color;
         border: none;
         font-size: 1.3rem;
         cursor: pointer;
+        width: 100%;
       }
 
       input::placeholder {
@@ -67,7 +68,7 @@
       }
 
       .alert-danger {
-        font-size: clamp(0.55rem, 0.3rem + 1vw, 1rem);
+        font-size: clamp(0.55rem, 0.3rem + 1vw, 0.76rem);
         font-weight: 400;
         font-style: italic;
         color: u.$clr-primary-light-red;
@@ -122,7 +123,7 @@
 
     &__input {
       padding-bottom: 0.8em;
-      gap: 1.5rem;
+      gap: u.rem(30);
       justify-content: initial;
 
       .btn {
@@ -130,8 +131,9 @@
       }
 
       .field-container {
+        max-width: u.rem(143);
+
         input {
-          max-width: 156px;
           padding: 0.8rem 1rem;
         }
       }
