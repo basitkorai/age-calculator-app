@@ -146,8 +146,9 @@ body {
   color: hsla(0, 0%, 0%, 0.5);
 }
 .calculator__input .field-container input:focus-visible {
-  outline: 1px solid hsl(0, 0%, 8%);
+  outline: 1px solid hsl(259, 100%, 65%);
   border: none;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
 }
 .calculator__input .field-container input {
   display: block;
@@ -258,6 +259,7 @@ body {
 
 .btn:hover {
   background-color: hsl(0, 0%, 8%);
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
 }
 
 @media screen and (min-width: 700px) {
