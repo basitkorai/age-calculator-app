@@ -30,7 +30,7 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 - **Bonus**: See the age numbers animate to their final number when the form is submitted
 
-### Screenshot
+### Screenshots
 
 ![](./screenshots/screen-desktop.png)
 ![](./screenshots/screen-mobile.png)
