@@ -57,7 +57,7 @@ Users should be able to:
 
 ## Author
 
-- Website - work in progress
+- [Basit Korai](https://basitkorai.netlify.app) - a self-taught Full Stack Developer.
 - Frontend Mentor - [@basit-flash](https://www.frontendmentor.io/profile/basit-flash)
 - Twitter - [@basitxkorai](https://twitter.com/basitxkorai)
 <!-- - LinkedIn - [Rocky (Biplob) BARUA](https://www.linkedin.com/in/rockybarua) -->
